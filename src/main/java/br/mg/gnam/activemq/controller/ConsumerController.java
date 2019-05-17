@@ -17,7 +17,7 @@ public class ConsumerController {
 		Thread t = new Thread(() -> {
 			wait(message);
 			System.out.println( message );
-			System.out.println("=>>>>> Thread " + message +  " "  + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss:sss").format(new Date())); 
+			System.out.println("=>>>>>> Thread " + message +  " "  + new SimpleDateFormat("dd/MM/yyyy HH:mm:ss:sss").format(new Date())); 
 			System.out.println("###################################################################");
 		});		
 		t.start();
