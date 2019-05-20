@@ -13,8 +13,8 @@ public class ProduceController {
 	private JmsTemplate jmsTemplate;
 
 	@GetMapping("/message/{texto}")
-	public void sendMessage (@PathVariable  String texto ) {
-		for (int i = 0; i < 150; i++) {
+	public void sendMessage (@PathVariable  String texto) {
+		for (int i = 0; i < 10; i++) {
 			jmsTemplate.convertAndSend("message", String.valueOf(i) + " " + texto);
 		}
 		
